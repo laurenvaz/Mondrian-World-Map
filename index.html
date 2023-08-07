@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian World</title>
+  <style>
+
+    .container {
+      height: 620px;
+      width: 920px;
+      display: grid;
+      grid-template-columns: repeat(46, 1fr);
+      grid-template-rows: repeat(31, 1fr);
+      background-color: #232629;
+      gap: 5px;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+    }
+
+    .red {
+      background-color: #E72F24;
+    }
+
+    .blue {
+      background-color: #004592;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+    }
+
+    .w1 {
+      grid-area: 1 / 1 / 4 / 4;
+    }
+
+    .w2 {
+      grid-area: 1 / 4 / 3 / 6;
+    }
+
+    .w3 {
+      grid-area: 1 / 6 / 3 / 13;
+    }
+
+    .w4 {
+      grid-area: 1 / 13 / 1 / 21;
+    }
+
+    .w5 {
+      grid-area: 1 / 21 / 9 / 21;
+    }
+
+    .w6 {
+      grid-area: 1 / 22 / 5 / 25;
+    }
+
+    .w7 {
+      grid-area: 4 / 1 / 5 / 4;
+    }
+
+    .w8 {
+      grid-area: 5 / 1 / 8 / 4;
+    }
+
+    .w9 {
+      grid-area: 3 / 4 / 4 / 6;
+    }
+
+    .w10 {
+      grid-area: 4 / 4 / 5 / 6
+    }
+
+    .w11 {
+      grid-area: 3 / 6 / 4 / 13;
+    }
+    
+    .w12 {
+      grid-area: 4 / 6 / 5 / 9;
+    }
+
+    .w13 {
+      grid-area: 4 / 12 / 5 / 13
+    }
+
+    .w14 {
+      grid-area: 2 / 15 / 2 / 18;
+    }
+
+    .w15 {
+      grid-area: 3 / 14 / 5 / 15;
+    }
+
+    .w16 {
+      grid-area: 5 / 13 / 8 / 13;
+    }
+
+    .w17 {
+      grid-area: 7 / 6 / 8 / 7;
+    }
+
+    .w18 {
+      grid-area: 8 / 1 / 12 / 4;
+    }
+
+    .w19 {
+      grid-area: 8 / 4 / 12 / 6;
+    }
+
+    .w20 {
+      grid-area: 8 / 6 / 12 / 8;
+    }
+
+    .w21 {
+      grid-area: 4 / 15 / 5 / 16;
+    }
+
+    .w22 {
+      grid-area: 4 / 16 / 7 / 17;
+    }
+
+    .w23 {
+      grid-area: 6 / 14 / 7 / 16 ;
+    }
+
+    .w24 {
+      grid-area: 1 / 25 / 3 / 27;
+    }
+
+    .w25 {
+      grid-area: 1 / 27 / 3 / 29;
+    }
+
+    .w26 {
+      grid-area: 1 / 29 / 3 / 30;
+    }
+
+    .w27 {
+      grid-area: 1 / 30 / 3 / 32;
+    }
+
+    .w28 {
+      grid-area: 1 / 32 / 3 / 36;
+    }
+
+    .w29 {
+      grid-area: 1 / 36 / 3 / 44;
+    }
+
+    .w30 {
+      grid-area: 1 / 44 / 3 / 47;
+    }
+
+    .w31 {
+      grid-area: 12 / 1 / 14 / 4;
+    }
+
+    .w32 {
+      grid-area: 14 / 1 / 15 / 4;
+    }
+
+    .w33 {
+      grid-area: 15 / 1 / 19 / 4;
+    }
+
+    .w34 {
+      grid-area: 19 / 1 / 25 / 4;
+    }
+
+    .w35 {
+      grid-area: 25 / 1 / 27 / 4;
+    }
+
+    .w36 {
+      grid-area: 27 / 1 / 29 / 5;
+    }
+
+    .w37 {
+      grid-area: 29 / 1 / 31 / 5;
+    }
+
+    .w38 {
+      grid-area: 12 / 4 / 14 / 6;
+    }
+
+    .w39 {
+      grid-area: 12 / 6 / 14 / 10;
+    }
+
+    .w40 {
+      grid-area: 14 / 4 / 15 / 5;
+    }
+
+    .w41 {
+      grid-area: 15 / 4 / 19 / 5;
+    }
+
+    .w42  {
+      grid-area: 16 / 5 / 19 / 6;
+    }
+
+    .w43 {
+      grid-area: 15 / 5 / 16 / 6;
+    }
+
+    .w44 {
+      grid-area: 19 / 4 / 24 / 5;
+    }
+
+    .w45 {
+      grid-area: 24 / 4 / 25 / 5;
+    }
+
+    .w46 {
+      grid-area: 25 / 4 / 27 / 5;
+    }
+
+    .w47 {
+      grid-area: 7 / 16 / 8 / 17;
+    }
+
+    .w48 {
+      grid-area: 6 / 18 / 7 / 21;
+    }
+
+    .w49 {
+      grid-area: 7 / 17 / 8 / 20;
+    }
+
+    .w50 { 
+      grid-area: 8 / 17 / 9 / 21;
+    }
+
+    .w51 {
+      grid-area: 9 / 16 / 15 / 21;
+    }
+
+    .w52 {
+      grid-area: 11 / 14 / 13 / 16;
+    }
+
+    .w53 {
+      grid-area: 12 / 12 / 14 / 13;
+    }
+
+    .w54 {
+      grid-area: 14 / 6 / 15 / 11;
+    }
+
+    .w55 {
+      grid-area: 15 / 6 / 16 / 9;
+    }
+
+    .w56 {
+      grid-area: 16 / 6 / 19 / 9;
+    }
+
+    .w57 {
+      grid-area: 19 / 5 / 24 / 9;
+    }
+
+    .w58 {
+      grid-area: 24 / 5 / 25 / 9;
+    }
+
+    .w59 {
+      grid-area: 25 / 5 / 27 / 9;
+    }
+
+    .w60 {
+      grid-area: 27 / 5 / 29/ 9;
+    }
+
+    .w61 {
+      grid-area: 15 / 9 / 16 / 13
+    }
+
+    .w62 {
+      grid-area: 16 / 9 / 19 / 14;
+    }
+
+    .w63 {
+      grid-area: 4 / 25 / 5 / 27;
+    }
+
+    .w64 {
+      grid-area: 19 / 9 / 24 / 14;
+    }
+
+    .w65 {
+      grid-area: 24 / 9 / 25 / 14;
+    }
+
+    .w66 {
+      grid-area: 25 / 9 / 27 / 14;
+    }
+
+    .w67 {
+      grid-area: 27 / 9 / 29 / 14;
+    }
+
+    .w68 {
+      grid-area: 19 / 14 / 24 / 15;
+    }
+
+    .w69 {
+      grid-area: 24 / 14 / 25 / 15;
+    }
+
+    .w70 {
+      grid-area: 25 / 14 / 27 / 15;
+    }
+
+    .w71 {
+      grid-area: 27 / 14 / 29 / 15;
+    }
+
+    .w72 {
+      grid-area: 13 / 13 / 14 / 14;
+    }
+
+    .w73 {
+      grid-area: 13 / 14 / 14 / 15;
+    }
+
+    .w74 {
+      grid-area: 14 / 14 / 15 / 16;
+    }
+
+    .w75 {
+      grid-area: 9 / 21 / 13 / 22;
+    }
+
+    .w76 {
+      grid-area: 15 / 17 / 17 / 19;
+    }
+
+    .w77 {
+      grid-area: 5 / 22 / 7 / 23;
+    }
+
+    .w78 {
+      grid-area: 5 / 23 / 7 / 24;
+    }
+
+    .w79 {
+      grid-area: 5 / 24 / 6 / 25;
+    }
+
+    .w80 {
+      grid-area: 25 / 15 / 27 / 16;
+    }
+
+    .w81 {
+      grid-area: 3 / 44 / 5 / 47;
+    }
+
+    .w82 {
+      grid-area: 5 / 44 / 6 / 47;
+    }
+
+    .w83 {
+      grid-area: 6 / 44 / 8 / 47;
+    }
+
+    .w84 {
+      grid-area: 8 / 44 / 11 / 47;
+    }
+
+    .w85 {
+      grid-area: 11 / 44 / 14 / 47;
+    }
+
+    .w86 {
+      grid-area: 14 / 44 / 17 / 47;
+    }
+
+    .w87 {
+      grid-area: 17 / 43 / 19 / 47;
+    }
+
+    .w88 {
+      grid-area: 19 / 43 / 22 / 47;
+    }
+
+    .w89 {
+      grid-area: 22 / 43 / 27 / 47;
+    }
+
+    .w90 {
+      grid-area: 27 / 42 / 28 / 47;
+    }
+
+    .w91 {
+      grid-area: 28 / 42 / 31 / 47;
+    }
+
+    .w92 {
+      grid-area: 24 / 16 / 25 / 17;
+    }
+
+    .w93 {
+      grid-area: 25 / 16 / 27 / 17;
+    }
+
+    .w94 {
+      grid-area: 27 / 16 / 29 / 17;
+    }
+
+    .w95 {
+      grid-area: 29 / 16 / 30 / 17;
+    }
+
+    .w96 {
+      grid-area: 21 / 17 / 27 / 19;
+    }
+
+    .w97 {
+      grid-area: 27 / 17 / 29 / 19;
+    }
+
+    .w98 {
+      grid-area: 29 / 17 / 30 / 19;
+    }
+
+    .w99 {
+      grid-area: 15 / 19 / 19 / 22;
+    }
+
+    .w100 {
+      grid-area: 19 / 19 / 27 / 22;
+    }
+
+    .w101 {
+      grid-area: 27 / 19 / 29 / 22;
+    }
+
+    .w102 {
+      grid-area: 16 / 22 / 19 / 24;
+    }
+
+    .w103 {
+      grid-area: 19 / 22 / 22 / 25;
+    }
+
+    .w104 {
+      grid-area: 22 / 22 / 27 / 25;
+    }
+
+    .w105 {
+      grid-area: 27 / 22 / 28 / 28;
+    }
+
+    .w106 {
+      grid-area: 22 / 25 / 27 / 27;
+    }
+
+    .w107 {
+      grid-area: 19 / 27 / 22 / 28;
+    }
+
+    .w108 {
+      grid-area: 22 / 27 / 27 / 28;
+    }
+
+    .w109 {
+      grid-area: 22 / 28 / 23 / 29;
+    }
+
+    .w110 {
+      grid-area: 23 / 28 / 27 / 31;
+    }
+
+    .w111 {
+      grid-area: 27 / 31 / 28 / 32;
+    }
+
+    .w112 {
+      grid-area: 27 / 40 / 28 / 42;
+    }
+    
+    .w113 {
+      grid-area: 22 / 29 / 23 / 31;
+    }
+
+    .w114 {
+      grid-area: 22 / 31 / 23 / 32;
+    }
+
+    .w115 {
+      grid-area: 23 / 31 / 27 / 32;
+    }
+
+    .w116 {
+      grid-area: 22 / 32 / 23 / 34;
+    }
+
+    .w117 {
+      grid-area: 23 / 32 / 27 / 34;
+    }
+
+    .w118 {
+      grid-area: 23 / 34 / 27 / 40;
+    }
+
+    .w119 {
+      grid-area: 22 / 40 / 27 / 42;
+    }
+
+    .w120 {
+      grid-area: 24 / 42 / 27 / 43;
+    }
+
+    .w121 {
+      grid-area: 9 / 22 / 10 / 23;
+    }
+
+    .w122 {
+      grid-area: 11 / 22 / 12 / 23;
+    }
+
+    .w123 {
+      grid-area: 7 / 23 / 9 / 24;
+    }
+
+    .w124 {
+      grid-area: 7 / 24 / 8 / 26;
+    }
+
+    .w125 {
+      grid-area: 10 / 23 / 11 / 24;
+    }
+
+    .w126 {
+      grid-area: 11 / 24 / 12 / 27;
+    }
+
+    .w127 {
+      grid-area: 10 / 25 / 11 / 26;
+    }
+
+    .w128 {
+      grid-area: 3 / 27 / 6 / 29;
+    }
+
+    .w129 {
+      grid-area: 3 / 29 / 4 / 30;
+    }
+
+    .w130 {
+      grid-area: 3 / 30 / 5 / 32;
+    }
+
+    .w131 {
+      grid-area: 3 / 36 / 5 / 44;
+    }
+
+    .w132 {
+      grid-area: 5 / 30 / 6 / 31;
+    }
+
+    .w133 {
+      grid-area: 6 / 43 / 8 / 44;
+    }
+
+    .w134 {
+      grid-area: 8 / 39 / 11 / 40;
+    }
+
+    .w135 {
+      grid-area: 8 / 40 / 9 / 41;
+    }
+
+    .w136 {
+      grid-area: 9 / 40 / 11 / 42;
+    }
+
+    .w137 {
+      grid-area: 8 / 42 / 11 / 43;
+    }
+
+    .w138 {
+      grid-area: 8 / 43 / 11 / 44;
+    }
+
+    .w139 {
+      grid-area: 11 / 36 / 12 / 40;
+    }
+
+    .w140 {
+      grid-area: 13 / 27 / 15 / 28;
+    }
+
+    .w141 {
+      grid-area: 22 / 34 / 23 / 39;
+    }
+
+    .w142 {
+      grid-area: 19 / 42 / 22 / 43;
+    }
+
+    .w143 {
+      grid-area: 19 / 41 / 22 / 42;
+    }
+
+    .w144 {
+      grid-area: 20 / 34 / 22 / 36;
+    }
+
+    .w145 {
+      grid-area: 20 / 32 / 22 / 34;
+    }
+
+    .w146 {
+      grid-area: 20 / 31 / 22 / 32;
+    }
+
+    .w147 {
+      grid-area: 20 / 29 / 22 / 31;
+    }
+
+    .w148 {
+      grid-area: 15 / 28 / 19 / 31;
+    }
+
+    .w149 {
+      grid-area: 11 / 43 / 14 / 44;
+    }
+
+    .w150 {
+      grid-area: 11 / 42 / 14 / 43;
+    }
+
+    .w151 {
+      grid-area: 11 / 40 / 14 / 42;
+    }
+
+    .w152 {
+      grid-area: 22 / 37 / 23 / 38;
+    }
+
+    .w153 {
+      grid-area: 14 / 43 / 16 / 44;
+    }
+
+    .w154 {
+      grid-area: 14 / 42 / 16 / 43;
+    }
+
+    .w155 {
+      grid-area: 13 / 30 / 15 / 31;
+    }
+
+    .w156 {
+      grid-area: 16 / 31 / 18 / 32;
+    }
+
+    .w157 {
+      grid-area: 19 / 29 / 20 / 31;
+    }
+
+    .w158 {
+      grid-area: 14 / 32 / 16 / 34;
+    }
+
+    .w159 {
+      grid-area: 16 / 32 / 18 / 34;
+    }
+
+    .w160 {
+      grid-area: 18 / 32 / 19 / 34;
+    }
+
+    .w161 {
+      grid-area: 19 / 32 / 20 / 34;
+    }
+
+    .w162 {
+      grid-area: 13 / 38 / 14 / 40;
+    }
+
+    .w163 {
+      grid-area: 17 / 42 / 19 / 43;
+    }
+
+    .w164 {
+      grid-area: 14 / 36 / 16 / 37;
+    }
+
+    .w165 {
+      grid-area: 16 / 35 / 18 / 36;
+    }
+
+    .w166 {
+      grid-area: 14 / 38 / 16 / 40;
+    }
+
+    .w167 {
+      grid-area: 14 / 40 / 16 / 42;
+    }
+
+    .w168 {
+      grid-area: 16 / 38 / 17 / 40;
+    }
+
+    .w169 {
+      grid-area: 16 / 40 / 17 / 42;
+    }
+
+    .w170 {
+      grid-area: 17 / 40 / 19 / 42;
+    }
+
+    .w171 {
+      grid-area: 18 / 38 / 19 / 40
+    }
+
+    .w172 {
+      grid-area: 19 / 34 / 20 / 36;
+    }
+
+
+
+
+    .r1 {
+      grid-area: 4 / 9 / 5 / 12
+    }
+
+    .r2 {
+      grid-area: 2 / 18 / 6 / 21
+    }
+
+    .r3 {
+      grid-area: 5 / 4 / 8 / 6;
+    }
+
+    .r4 {
+      grid-area: 7 / 7 / 8 / 8;
+    }
+
+    .r5 {
+      grid-area: 7 / 14 / 11 / 16;
+    }
+
+    .r6 {
+      grid-area: 14 / 11 / 15 / 14;
+    }
+
+    .r7 {
+      grid-area: 17 / 17 / 21 / 19;
+    }
+
+    .r8 {
+      grid-area: 30 / 16 / 32 / 19;
+    }
+
+    .r9 {
+      grid-area: 28 / 28 / 32 / 42;
+    }
+
+    .r10 {
+      grid-area: 13 / 21 / 15 / 22;
+    }
+
+    .r11 {
+      grid-area: 12 / 27 / 13 / 37;
+    }
+
+    .r12 {
+      grid-area: 6 / 24 / 7 / 25;
+    }
+
+    .r13 {
+      grid-area: 9 / 23 / 10 / 24;
+    }
+
+    .r14 {
+      grid-area: 7 / 26 / 11 / 27;
+    }
+
+    .r15 {
+      grid-area: 4 / 29 / 6 / 30;
+    }
+
+    .r16 {
+      grid-area: 5 / 31 / 6 / 36;
+    }
+
+    .r17 {
+      grid-area: 16 / 24 / 19 / 27;
+    }
+
+    .r18 {
+      grid-area: 15 / 27 / 19 / 28;
+    }
+
+    .r19 {
+      grid-area: 16 / 34 / 18 / 35;
+    }
+
+    .r20 {
+      grid-area: 16 / 36 / 17 / 37;
+    }
+
+    .r21 {
+      grid-area: 20 / 36 / 22 / 37;
+    }
+
+    .r22 {
+      grid-area: 22 / 39 / 23 / 40;
+    }
+
+    .r23 {
+      grid-area: 22 / 42 / 24 / 43;
+    }
+
+    .r24 {
+      grid-area: 5 / 36 / 6 / 44;
+    }
+
+
+  
+
+    .y1 {
+      grid-area: 2 / 13 / 2 / 15;
+    }
+
+    .y2 {
+      grid-area: 3 / 13 / 5 / 14
+    }
+
+    .y3 {
+      grid-area: 5 / 6 / 7 / 13;
+    }
+
+    .y4 {
+      grid-area: 8 / 13 / 13 / 14;
+    }
+
+    .y5 {
+      grid-area: 5 / 14 / 6 / 16;
+    }
+
+    .y6 {
+      grid-area: 31 / 1 / 32 / 5;
+    }
+
+    .y7 {
+      grid-area: 14 / 5 / 15 / 6;
+    }
+
+    .y8 {
+      grid-area: 12 / 10 / 14 / 12;
+    }
+
+    .y9 {
+      grid-area: 4 / 17 / 7 / 18;
+    }
+
+    .y10 {
+      grid-area: 7 / 20 / 8 / 21;
+    }
+
+    .y11 {
+      grid-area: 13 / 15 / 14 / 16;
+    }
+
+    .y12 {
+      grid-area: 16 / 14 / 19 / 17;
+    }
+
+    .y13 {
+      grid-area: 24 / 15 / 25 / 16;
+    }
+
+    .y14 {
+      grid-area: 27 / 15 / 29 / 16;
+    }
+
+    .y15 {
+      grid-area: 7 / 22 / 9 / 23;
+    }
+
+    .y16 {
+      grid-area: 3 / 25 / 4 / 27;
+    }
+
+    .y17 {
+      grid-area: 29 / 19 / 32 / 22;
+    }
+
+    .y18 {
+      grid-area: 19 / 25 / 22 / 27;
+    }
+
+    .y19 {
+      grid-area: 27 / 28 / 28 / 31;
+    }
+
+    .y20 {
+      grid-area: 27 / 32 / 28 / 40;
+    }
+
+    .y21 {
+      grid-area: 31 / 42 / 32 / 47;
+    }
+
+    .y22 {
+      grid-area: 11 / 23 / 12 / 24;
+    }
+
+    .y23 {
+      grid-area: 10 / 24 / 11 / 25;
+    }
+
+    .y24 {
+      grid-area: 6 / 27 / 12 / 36;
+    }
+
+    .y25 {
+      grid-area: 13 / 29 / 14 / 30;
+    }
+
+    .y26 {
+      grid-area: 6 / 39 / 8 / 43;
+    }
+
+    .y27 {
+      grid-area: 12 / 38 / 13 / 40;
+    }
+
+    .y28 {
+      grid-area: 14 / 34 / 16 / 36;
+    }
+
+    .y29 {
+      grid-area: 15 / 37 / 16 / 38;
+    }
+
+    .y30 {
+      grid-area: 18 / 35 / 19 / 36
+    }
+
+    .y31 {
+      grid-area: 20 / 40 / 22 / 41;
+    }
+
+
+
+
+
+    .b1 {
+      grid-area: 3 / 15 / 4 / 18;
+    }
+
+    .b2 {
+      grid-area: 7 / 8 / 12 / 13;
+    }
+
+    .b3 {
+      grid-area: 29 / 5 / 32 / 16;
+    }
+
+    .b4 {
+      grid-area: 8 / 16 / 9 / 17;
+    }
+
+    .b5 {
+      grid-area: 15 / 13 / 16 / 17;
+    }
+
+    .b6 {
+      grid-area: 19 / 15 / 24 / 17;
+    }
+
+    .b7 {
+      grid-area: 28 / 22 / 32 / 28;
+    }
+
+    .b8 {
+      grid-area: 10 / 22 / 11 / 23;
+    }
+
+    .b9 {
+      grid-area: 8 / 24 / 10 / 26;
+    }
+
+    .b10 {
+      grid-area: 5 / 25 / 7 / 27;
+    }
+
+    .b11 {
+      grid-area: 12 / 22 / 16 / 27;
+    }
+
+    .b12 {
+      grid-area: 3 / 32 / 5 / 36;
+    }
+
+    .b13 {
+      grid-area: 6 / 36 / 11 / 39;
+    }
+
+    .b14 {
+      grid-area: 8 / 41 / 9 / 42;
+    }
+
+    .b15 {
+      grid-area: 13 / 28 / 15 / 29;
+    }
+
+    .b16 {
+      grid-area: 13 / 31 / 14 / 37;
+    }
+
+    .b17 {
+      grid-area: 14 / 31 / 16 / 32;
+    }
+
+    .b18 {
+      grid-area: 20 / 28 / 21 / 29;
+    }
+
+    .b19 {
+      grid-area: 17 / 38 / 18 / 40;
+    }
+
+    .b20 {
+      grid-area: 19 / 37 / 22 / 40;
+    }
+
+  </style>
+</head>
+
+
+
+
+<body>
+  <div class="container">
+    <div class="white w1"></div>
+    <div class="white w2"></div>
+    <div class="white w3"></div>
+    <div class="white w4"></div>
+    <div class="white w5"></div>
+    <div class="white w6"></div>
+    <div class="white w7"></div>
+    <div class="white w8"></div>
+    <div class="white w9"></div>
+    <div class="white w10"></div>
+    <div class="white w11"></div>
+    <div class="white w12"></div>
+    <div class="white w13"></div>
+    <div class="white w14"></div>
+    <div class="white w15"></div>
+    <div class="white w16"></div>
+    <div class="white w17"></div>
+    <div class="white w18"></div>
+    <div class="white w19"></div>
+    <div class="white w20"></div>
+    <div class="white w21"></div>
+    <div class="white w22"></div>
+    <div class="white w23"></div>
+    <div class="white w24"></div>
+    <div class="white w25"></div>
+    <div class="white w26"></div>
+    <div class="white w27"></div>
+    <div class="white w28"></div>
+    <div class="white w29"></div>
+    <div class="white w30"></div>
+    <div class="white w31"></div>
+    <div class="white w32"></div>
+    <div class="white w33"></div>
+    <div class="white w34"></div>
+    <div class="white w35"></div>
+    <div class="white w36"></div>
+    <div class="white w37"></div>
+    <div class="white w38"></div>
+    <div class="white w39"></div>
+    <div class="white w40"></div>
+    <div class="white w41"></div>
+    <div class="white w42"></div>
+    <div class="white w43"></div>
+    <div class="white w44"></div>
+    <div class="white w45"></div>
+    <div class="white w46"></div>
+    <div class="white w47"></div>
+    <div class="white w48"></div>
+    <div class="white w49"></div>
+    <div class="white w50"></div>
+    <div class="white w51"></div>
+    <div class="white w52"></div>
+    <div class="white w53"></div>
+    <div class="white w54"></div>
+    <div class="white w55"></div>
+    <div class="white w56"></div>
+    <div class="white w57"></div>
+    <div class="white w58"></div>
+    <div class="white w59"></div>
+    <div class="white w60"></div>
+    <div class="white w61"></div>
+    <div class="white w62"></div>
+    <div class="white w63"></div>
+    <div class="white w64"></div>
+    <div class="white w65"></div>
+    <div class="white w66"></div>
+    <div class="white w67"></div>
+    <div class="white w68"></div>
+    <div class="white w69"></div>
+    <div class="white w70"></div>
+    <div class="white w71"></div>
+    <div class="white w72"></div>
+    <div class="white w73"></div>
+    <div class="white w74"></div>
+    <div class="white w75"></div>
+    <div class="white w76"></div>
+    <div class="white w77"></div>
+    <div class="white w78"></div>
+    <div class="white w79"></div>
+    <div class="white w80"></div>
+    <div class="white w81"></div>
+    <div class="white w82"></div>
+    <div class="white w83"></div>
+    <div class="white w84"></div>
+    <div class="white w85"></div>
+    <div class="white w86"></div>
+    <div class="white w87"></div>
+    <div class="white w88"></div>
+    <div class="white w89"></div>
+    <div class="white w90"></div>
+    <div class="white w91"></div>
+    <div class="white w92"></div>
+    <div class="white w93"></div>
+    <div class="white w94"></div>
+    <div class="white w95"></div>
+    <div class="white w96"></div>
+    <div class="white w97"></div>
+    <div class="white w98"></div>
+    <div class="white w99"></div>
+    <div class="white w100"></div>
+    <div class="white w101"></div>
+    <div class="white w102"></div>
+    <div class="white w103"></div>
+    <div class="white w104"></div>
+    <div class="white w105"></div>
+    <div class="white w106"></div>
+    <div class="white w107"></div>
+    <div class="white w108"></div>
+    <div class="white w109"></div>
+    <div class="white w110"></div>
+    <div class="white w111"></div>
+    <div class="white w112"></div>
+    <div class="white w113"></div>
+    <div class="white w114"></div>
+    <div class="white w115"></div>
+    <div class="white w116"></div>
+    <div class="white w117"></div>
+    <div class="white w118"></div>
+    <div class="white w119"></div>
+    <div class="white w120"></div>
+    <div class="white w121"></div>
+    <div class="white w122"></div>
+    <div class="white w123"></div>
+    <div class="white w124"></div>
+    <div class="white w125"></div>
+    <div class="white w126"></div>
+    <div class="white w127"></div>
+    <div class="white w128"></div>
+    <div class="white w129"></div>
+    <div class="white w130"></div>
+    <div class="white w131"></div>
+    <div class="white w132"></div>
+    <div class="white w133"></div>
+    <div class="white w134"></div>
+    <div class="white w135"></div>
+    <div class="white w136"></div>
+    <div class="white w137"></div>
+    <div class="white w138"></div>
+    <div class="white w139"></div>
+    <div class="white w140"></div>
+    <div class="white w141"></div>
+    <div class="white w142"></div>
+    <div class="white w143"></div>
+    <div class="white w144"></div>
+    <div class="white w145"></div>
+    <div class="white w146"></div>
+    <div class="white w147"></div>
+    <div class="white w148"></div>
+    <div class="white w149"></div>
+    <div class="white w150"></div>
+    <div class="white w151"></div>
+    <div class="white w152"></div>
+    <div class="white w153"></div>
+    <div class="white w154"></div>
+    <div class="white w155"></div>
+    <div class="white w156"></div>
+    <div class="white w157"></div>
+    <div class="white w158"></div>
+    <div class="white w159"></div>
+    <div class="white w160"></div>
+    <div class="white w161"></div>
+    <div class="white w162"></div>
+    <div class="white w163"></div>
+    <div class="white w164"></div>
+    <div class="white w165"></div>
+    <div class="white w166"></div>
+    <div class="white w167"></div>
+    <div class="white w168"></div>
+    <div class="white w169"></div>
+    <div class="white w170"></div>
+    <div class="white w171"></div>
+    <div class="white w172"></div>
+    <div class="white w173"></div>
+    <div class="white w174"></div>
+    <div class="white w175"></div>
+    <div class="white w176"></div>
+    <div class="white w177"></div>
+    <div class="white w178"></div>
+    <div class="white w179"></div>
+    <div class="white w180"></div>
+    <div class="white w181"></div>
+    <div class="white w182"></div>
+    <div class="white w183"></div>
+    <div class="white w184"></div>
+    <div class="white w185"></div>
+    <div class="white w186"></div>
+    <div class="white w187"></div>
+    <div class="white w188"></div>
+    <div class="white w189"></div>
+    <div class="white w190"></div>
+
+    <div class="red r1"></div>
+    <div class="red r2"></div>
+    <div class="red r3"></div>
+    <div class="red r4"></div>
+    <div class="red r5"></div>
+    <div class="red r6"></div>
+    <div class="red r7"></div>
+    <div class="red r8"></div>
+    <div class="red r9"></div>
+    <div class="red r10"></div>
+    <div class="red r11"></div>
+    <div class="red r12"></div>
+    <div class="red r13"></div>
+    <div class="red r14"></div>
+    <div class="red r15"></div>
+    <div class="red r16"></div>
+    <div class="red r17"></div>
+    <div class="red r18"></div>
+    <div class="red r19"></div>
+    <div class="red r20"></div>
+    <div class="red r21"></div>
+    <div class="red r22"></div>
+    <div class="red r23"></div>
+    <div class="red r24"></div>
+
+    <div class="yellow y1"></div>
+    <div class="yellow y2"></div>
+    <div class="yellow y3"></div>
+    <div class="yellow y4"></div>
+    <div class="yellow y5"></div>
+    <div class="yellow y6"></div>
+    <div class="yellow y7"></div>
+    <div class="yellow y8"></div>
+    <div class="yellow y9"></div>
+    <div class="yellow y10"></div>
+    <div class="yellow y11"></div>
+    <div class="yellow y12"></div>
+    <div class="yellow y13"></div>
+    <div class="yellow y14"></div>
+    <div class="yellow y15"></div>
+    <div class="yellow y16"></div>
+    <div class="yellow y17"></div>
+    <div class="yellow y18"></div>
+    <div class="yellow y19"></div>
+    <div class="yellow y20"></div>
+    <div class="yellow y21"></div>
+    <div class="yellow y22"></div>
+    <div class="yellow y23"></div>
+    <div class="yellow y24"></div>
+    <div class="yellow y25"></div>
+    <div class="yellow y26"></div>
+    <div class="yellow y27"></div>
+    <div class="yellow y28"></div>
+    <div class="yellow y29"></div>
+    <div class="yellow y30"></div>
+    <div class="yellow y31"></div>
+
+    <div class="blue b1"></div>
+    <div class="blue b2"></div>
+    <div class="blue b3"></div>
+    <div class="blue b4"></div>
+    <div class="blue b5"></div>
+    <div class="blue b6"></div>
+    <div class="blue b7"></div>
+    <div class="blue b8"></div>
+    <div class="blue b9"></div>
+    <div class="blue b10"></div>
+    <div class="blue b11"></div>
+    <div class="blue b12"></div>
+    <div class="blue b13"></div>
+    <div class="blue b14"></div>
+    <div class="blue b15"></div>
+    <div class="blue b16"></div>
+    <div class="blue b17"></div>
+    <div class="blue b18"></div>
+    <div class="blue b19"></div>
+    <div class="blue b20"></div>
+
+  </div>
+</body>
+
+</html>
